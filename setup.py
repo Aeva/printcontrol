@@ -3,7 +3,7 @@ from setuptools import setup
 setup(name="printcontrol",
       version="zero",
       description="",
-      url="https://github.com/Aeva/switchprint",
+      url="https://github.com/Aeva/printcontrol",
       author="Aeva Palecek",
       author_email="aeva.ntsc@gmail.com",
       license="GPLv3",
@@ -16,8 +16,6 @@ setup(name="printcontrol",
             ],
         },
 
-      #install_requires = [
-      #  "daemon",
-      #  "pyserial",
-      #  ])
-      
+      install_requires = [
+        "PyGObject",
+        ])
