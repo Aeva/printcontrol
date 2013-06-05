@@ -67,7 +67,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_n1_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_n1_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -78,7 +78,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_n2_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_n2_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -89,7 +89,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_n3_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_n3_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -100,7 +100,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_e1_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_e1_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -111,7 +111,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_e2_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_e2_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -122,7 +122,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_e3_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_e3_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -133,7 +133,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_s1_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_s1_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -144,7 +144,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_s2_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_s2_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -155,7 +155,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_s3_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_s3_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -166,7 +166,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_w1_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_w1_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -177,7 +177,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_w2_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_w2_offline.svg</property>
                           </object>
                         </child>
                         <child>
@@ -188,7 +188,7 @@
                             <property name="can_focus">False</property>
                             <property name="xalign">0</property>
                             <property name="yalign">0</property>
-                            <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/crosshair_w3_gray.svg</property>
+                            <property name="pixbuf">svg/crosshair_w3_offline.svg</property>
                           </object>
                         </child>
                       </object>
@@ -230,7 +230,7 @@
                                   <object class="GtkImage" id="bed_temp_img1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/gauge_unlit.svg</property>
+                                    <property name="pixbuf">svg/gauge_unlit.svg</property>
                                   </object>
                                 </child>
                                 <child>
@@ -321,7 +321,7 @@
                                   <object class="GtkImage" id="extruder_temp_img1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/gauge_unlit.svg</property>
+                                    <property name="pixbuf">svg/gauge_unlit.svg</property>
                                   </object>
                                 </child>
                                 <child>
@@ -529,7 +529,7 @@
                                   <object class="GtkImage" id="extruder_temp_img2">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="pixbuf">/home/aeva/science/printcontrol/printcontrol/templates/svg/gauge_unlit.svg</property>
+                                    <property name="pixbuf">svg/gauge_unlit.svg</property>
                                   </object>
                                 </child>
                                 <child>

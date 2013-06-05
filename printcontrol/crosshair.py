@@ -185,9 +185,19 @@ class Crosshair:
                 self.printer.move(-1*magnitude, 0, 0)
                 
         elif group in ("z"):
-            pass
+            magnitude = (10**(abs(int(param))-1))/10.0
+            if int(param) < 0:
+                magnitude *= -1
+            self.printer.move(0, 0, magnitude)
         elif group == "home":
-            pass
+            if param == "a":
+                self.printer.home()
+            elif param == "x":
+                self.printer.home(x_axis=True)
+            elif param == "y":
+                self.printer.home(y_axis=True)
+            elif param == "z":
+                self.printer.home(z_axis=True)
         
 
     def refocus(self):
