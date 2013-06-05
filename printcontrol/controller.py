@@ -112,3 +112,6 @@ class PrinterController(PrinterInterface):
         self.crosshair.on_focus_out(widget, event_info)
         for gauge in self.gauges:
             gauge.on_focus_out(widget, event_info)
+
+    def on_motors_off(self, *args):
+        self.motors_off()
