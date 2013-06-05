@@ -16,6 +16,7 @@ setup(name="printcontrol",
             ],
         },
 
-      install_requires = [
-        "PyGObject",
-        ])
+      #install_requires = [
+      #  "PyGObject",
+      #  ]
+      )
