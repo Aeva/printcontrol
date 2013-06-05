@@ -8,156 +8,277 @@
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_STRUCTURE_MASK</property>
     <property name="visible_window">False</property>
     <signal name="button-press-event" handler="on_button_press" swapped="no"/>
-    <signal name="motion-notify-event" handler="on_mouse_motion" swapped="no"/>
     <signal name="button-release-event" handler="on_button_release" swapped="no"/>
+    <signal name="motion-notify-event" handler="on_mouse_motion" swapped="no"/>
     <child>
       <object class="GtkFixed" id="fixed1">
-        <property name="width_request">256</property>
+        <property name="width_request">304</property>
         <property name="height_request">256</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkImage" id="north_1">
-            <property name="width_request">256</property>
+          <object class="GtkImage" id="shadow">
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_n1_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_shadow.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="north_1">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_n1_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="north_2">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_n2_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_n2_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="north_3">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_n3_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_n3_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="east_1">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_e1_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_e1_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="east_2">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_e2_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_e2_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="east_3">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_e3_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_e3_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="south_1">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_s1_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_s1_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="south_2">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_s2_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_s2_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="south_3">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_s3_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_s3_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="west_1">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_w1_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_w1_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="west_2">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_w2_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_w2_offline.svg</property>
           </object>
         </child>
         <child>
           <object class="GtkImage" id="west_3">
-            <property name="width_request">256</property>
+            <property name="width_request">304</property>
             <property name="height_request">256</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
             <property name="yalign">0</property>
-            <property name="pixbuf">svg/crosshair_w3_gray.svg</property>
+            <property name="pixbuf">svg/crosshair_w3_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_1">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z1_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_2">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z2_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_3">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z3_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_-1">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z-1_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_-2">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z-2_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="z_-3">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_z-3_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="home_all">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_ha_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="home_x">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_hx_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="home_y">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_hy_offline.svg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="home_z">
+            <property name="width_request">304</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="yalign">0</property>
+            <property name="pixbuf">svg/crosshair_hz_offline.svg</property>
           </object>
         </child>
       </object>
     </child>
   </object>
   <object class="GtkOffscreenWindow" id="picking_window">
-    <property name="width_request">256</property>
+    <property name="width_request">304</property>
     <property name="height_request">256</property>
     <property name="can_focus">False</property>
     <child>
       <object class="GtkImage" id="picking_crosshair">
-        <property name="width_request">256</property>
+        <property name="width_request">304</property>
         <property name="height_request">256</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
