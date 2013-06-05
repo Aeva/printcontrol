@@ -48,11 +48,20 @@ class Crosshair:
 
         self.__picking = builder.get_object("picking_crosshair")
         self.__buttons = {}
+        def track_widget(group, number):
+            img_name = "{0}_{1}".format(group, number)
+            img_widget = builder.get_object(img_name)
+            self.__buttons[img_name] = img_widget
+
         for cardinality in ["north", "east", "south", "west"]:
             for intensity in range(1, 4):
-                img_name = "{0}_{1}".format(cardinality, intensity)
-                img_widget = builder.get_object(img_name)
-                self.__buttons[img_name] = img_widget
+                track_widget(cardinality, intensity)
+        for num in range(-3, 4):
+            if num == 0:
+                continue
+            track_widget("z", num)
+        for axis in ["a", "x", "y", "z"]:
+            track_widget("home", axis)
 
         self.connected = False
         self.disable()
@@ -79,7 +88,7 @@ class Crosshair:
             "729fcf" : "west_1",
             "3465a4" : "west_2",
             "204a87" : "west_3",
-            "204a87" : "z_1",
+            "ad7fa8" : "z_1",
             "75507b" : "z_2",
             "5c3566" : "z_3",
             "e9b96e" : "z_-1",
@@ -132,34 +141,34 @@ class Crosshair:
         if self.connected:
             widget = self.pick(event_info.x, event_info.y)
             if widget != self.__last_pick:
-                self.update_buttons("blue")
+                self.update_buttons("normal")
                 self.__last_pick = widget
                 if widget:
-                    self.update_button(widget, "green")
+                    self.update_button(widget, "hover")
 
 
     def on_button_press(self, widget, event_info):
         widget = self.pick(event_info.x, event_info.y)
         if (widget and self.connected):
-            self.update_button(widget, "green")
+            self.update_button(widget, "press")
             self.button_action(widget)
 
 
     def on_button_release(self, widget, event_info):
         def reset_buttons(data):
             if self.connected:
-                self.update_buttons("blue")
+                self.update_buttons("normal")
         GObject.timeout_add(50, reset_buttons, None)   
 
 
     def enable(self):
         self.connected = True
-        self.update_buttons('blue')
+        self.update_buttons('normal')
 
 
     def disable(self):
         self.connected = False
-        self.update_buttons('gray')
+        self.update_buttons('offline')
 
 
     def button_action(self, widget):
