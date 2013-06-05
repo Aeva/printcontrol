@@ -87,10 +87,6 @@ class PrinterController(PrinterInterface):
         motors_off = self.builder.get_object("motors_off_button")
         motors_off.set_sensitive(True)
 
-        # FIXME don't send printer commands by default here
-        self.home()
-        self.relative_mode()
-
     def on_state_change(self, state):
         """Signal handler for when the printer goes on or offline."""
         if state == "ready":
