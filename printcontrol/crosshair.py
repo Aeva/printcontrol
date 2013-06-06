@@ -174,7 +174,7 @@ class Crosshair:
     def button_action(self, widget):
         group, param = widget.split("_")
         if group in ("north", "east", "south", "west"):
-            self.relative_mode()
+            self.printer.relative_mode()
             magnitude = 10**(int(param)-1)
             if group == "north":
                 self.printer.move(0, magnitude, 0)
@@ -186,7 +186,7 @@ class Crosshair:
                 self.printer.move(-1*magnitude, 0, 0)
                 
         elif group in ("z"):
-            self.relative_mode()
+            self.printer.xrelative_mode()
             magnitude = (10**(abs(int(param))-1))/10.0
             if int(param) < 0:
                 magnitude *= -1
