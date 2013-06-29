@@ -89,7 +89,19 @@ class PrinterController(PrinterInterface):
     
         for gauge in self.get_gauges():
             self.controls.add(gauge.widget)
-            gauge.disable()
+            gauge.enable()
+
+    def on_temp_request(self, gauge, target):
+        """Called by a gauge when a user requests a temperature change."""
+
+        # first determine if we're talking about a tool or the bed
+        if self.gauges["b"] == gauge:
+            # its the bed
+            self.set_bed_temp(target)
+        else:
+            # which tool?
+            tool = self.gauges["t"].index(gauge)
+            self.set_tool_temp(tool, target)
             
     def refocus(self):
         """Called to reset the ui state.  Currently, this is only

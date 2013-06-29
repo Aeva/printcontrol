@@ -65,9 +65,10 @@
                 <property name="id_column">1</property>
                 <items>
                   <item translatable="yes">Off</item>
-                  <item translatable="yes">ABS (230)</item>
-                  <item translatable="yes">PLA (165)</item>
+                  <item translatable="yes">ABS (110)</item>
+                  <item translatable="yes">PLA (50)</item>
                 </items>
+                <signal name="changed" handler="set_temperature" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -155,6 +156,7 @@
                   <item translatable="yes">ABS (230)</item>
                   <item translatable="yes">PLA (165)</item>
                 </items>
+                <signal name="changed" handler="set_temperature" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>

@@ -16,12 +16,13 @@
 # along with Printcontrol.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import os
+import os, re
 from gi.repository import Gtk
 
 
 class BasicGauge:
     def __init__(self, printer, prefix):
+        self.printer = printer
         template = os.path.split(__file__)[0]
         template = os.path.join(template, "templates", "temperature_gauges.glade")
         target = prefix + "gauge"
@@ -49,7 +50,6 @@ class BasicGauge:
     def disable(self):
         self.set_label(None)
         self.combo.set_sensitive(False)
-        #import pdb; pdb.set_trace()
 
     def enable(self):
         self.combo.set_sensitive(True)
@@ -61,6 +61,14 @@ class BasicGauge:
     def on_focus_out(self, widget, event_info):
         # TODO dim the gauge image when the window loses focus
         pass
+
+    def set_temperature(self, combo_text):
+        request = combo_text.get_active_text()
+        found = re.findall("\([0-9]+\)", request)
+        if len(found) == 1:
+            val = found[0]
+            target = val[1:-1]
+            self.printer.on_temp_request(self, int(target))
 
 
 class BedGauge(BasicGauge):
