@@ -100,8 +100,12 @@ class PrinterController(PrinterInterface):
             self.set_bed_temp(target)
         else:
             # which tool?
-            tool = self.gauges["t"].index(gauge)
-            self.set_tool_temp(tool, target)
+            try:
+                tool = self.gauges["t"].index(gauge)
+                self.set_tool_temp(tool, target)
+            except ValueError:
+                # never mind
+                pass
             
     def refocus(self):
         """Called to reset the ui state.  Currently, this is only
@@ -142,7 +146,6 @@ class PrinterController(PrinterInterface):
             self.gauges["b"].set_label(temps["bed"][0])
             for gauge, temp in zip(self.gauges["t"], temps["tools"]):
                 gauge.set_label(temp[0])
-            
         
     def set_printer_name(self, name):
         """Sets the displayed name for this printer."""

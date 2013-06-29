@@ -69,7 +69,8 @@ class BasicGauge:
             val = found[0]
             target = val[1:-1]
             self.printer.on_temp_request(self, int(target))
-
+        elif request == "Off":
+            self.printer.on_temp_request(self, int(0))
 
 class BedGauge(BasicGauge):
     def __init__(self, printer):
