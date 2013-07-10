@@ -40,6 +40,7 @@ class PrinterController(PrinterInterface):
 
         self.controls = self.builder.get_object("control_widgets_box")
         self.crosshair = Crosshair(self)
+        self.info = None
         self.gauges = {
             "b" : None,
             "t" : [],
@@ -54,16 +55,16 @@ class PrinterController(PrinterInterface):
         """Adds any necessary gaguges from a given temperature
         report."""
 
-        info = self.get_class_info()
-        assert info.printer_type == "FFF 3D Printer"
+        self.info = self.get_class_info()
+        assert self.info.printer_type == "FFF 3D Printer"
         
         dirty = False
-        if info.heated_bed:
+        if self.info.heated_bed:
             if self.gauges["b"] is None:
                 dirty = True
                 self.gauges["b"] = BedGauge(self)
 
-        while info.tools > len(self.gauges["t"]):
+        while self.info.tools > len(self.gauges["t"]):
             tool_num = len(self.gauges["t"])
             self.gauges["t"].append(ExtruderGauge(self, tool_num))
             dirty = True
@@ -146,7 +147,8 @@ class PrinterController(PrinterInterface):
         packet = json.loads(blob)
         if packet.has_key("thermistors"):
             temps = packet['thermistors']
-            self.gauges["b"].set_label(temps["bed"][0])
+            if self.info.heated_bed:
+                self.gauges["b"].set_label(temps["bed"][0])
             for gauge, temp in zip(self.gauges["t"], temps["tools"]):
                 gauge.set_label(temp[0])
         
