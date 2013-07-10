@@ -33,6 +33,7 @@ class SwitchBoardWindow(Gtk.Window, SwitchBoard):
         SwitchBoard.__init__(self, PrinterClass=PrinterController)
         
     def on_new_printer(self, printer):
+        print "NEW PRINTER", printer
         self.printers.append(printer)
         self.__update_content()
 

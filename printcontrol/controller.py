@@ -50,21 +50,24 @@ class PrinterController(PrinterInterface):
 
         PrinterInterface.__init__(self, printer_uuid)
 
-    def add_gauges(self, temps):
+    def add_gauges(self):
         """Adds any necessary gaguges from a given temperature
         report."""
+
+        info = self.get_class_info()
+        assert info.printer_type == "FFF 3D Printer"
         
         dirty = False
-        if temps.has_key("bed") and temps["bed"][0] > 0:
+        if info.heated_bed:
             if self.gauges["b"] is None:
                 dirty = True
                 self.gauges["b"] = BedGauge(self)
 
-        if temps.has_key("tools"):
-            while len(temps["tools"]) > len(self.gauges["t"]):
-                tool_num = len(self.gauges["t"])
-                self.gauges["t"].append(ExtruderGauge(self, tool_num))
-                dirty = True
+        while info.tools > len(self.gauges["t"]):
+            tool_num = len(self.gauges["t"])
+            self.gauges["t"].append(ExtruderGauge(self, tool_num))
+            dirty = True
+
         if dirty:
             self.update_controls()
 
@@ -134,6 +137,7 @@ class PrinterController(PrinterInterface):
     def on_state_change(self, state):
         """Signal handler for when the printer goes on or offline."""
         if state == "ready":
+            self.add_gauges()
             self.enable()
         elif state == "offline":
             self.disable()
@@ -142,7 +146,6 @@ class PrinterController(PrinterInterface):
         packet = json.loads(blob)
         if packet.has_key("thermistors"):
             temps = packet['thermistors']
-            self.add_gauges(temps)
             self.gauges["b"].set_label(temps["bed"][0])
             for gauge, temp in zip(self.gauges["t"], temps["tools"]):
                 gauge.set_label(temp[0])
