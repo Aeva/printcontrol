@@ -1,5 +1,4 @@
 
-
 * Installation Instructions
 
 This project requires that the switchprint daemon be installed and
@@ -10,8 +9,11 @@ More details here: https://github.com/Aeva/switchprint
 Next, be sure that python-dbus is installed.  You also need
 python-setuptools to finish the installation process.
 
-On debian, you can do it like so:
+On Debian, you can do it like so:
 $ sudo apt-get install python-dbus python-setuptools
+
+On Fedora, it looks like this:
+$ sudo yum install pyserial python-daemon python-setuptools
 
 python-gobject is also a dependency, but will be installed
 automagically via distutils when you install this package.
@@ -19,15 +21,20 @@ automagically via distutils when you install this package.
 Once you have the dependencies installed, install printcontrol like so
 $ git clone https://github.com/Aeva/printcontrol.git
 $ cd printcontrol
-$ sudo python setup.py install
-
--->  If you're planning on hacking on switchprint, do this instead:
 $ sudo python setup.py develop
+
+Rather than doing "sudo python setup.py install", use the develop
+version.  This will pull down any needed dependencies and setup
+symlinks in various path locations to point to the relevant parts of
+the repository.  Do not delete the cloned folder after running the
+setup command.  Also, the "install" variant is broken currently.
+
 
 
 * Community
 If you want to ask questions or get involve, join #voxelpress on
 freenode!  Warning: watch out for tumbleweeds and cobwebs.
+
 
 
 * Consumer Advisory Notice:
