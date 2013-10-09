@@ -66,7 +66,7 @@
                 <items>
                   <item translatable="yes">Off</item>
                   <item translatable="yes">ABS (110)</item>
-                  <item translatable="yes">PLA (50)</item>
+                  <item translatable="yes">PLA (45)</item>
                 </items>
                 <signal name="changed" handler="set_temperature" swapped="no"/>
               </object>
@@ -154,7 +154,7 @@
                 <items>
                   <item translatable="yes">Off</item>
                   <item translatable="yes">ABS (230)</item>
-                  <item translatable="yes">PLA (165)</item>
+                  <item translatable="yes">PLA (195)</item>
                 </items>
                 <signal name="changed" handler="set_temperature" swapped="no"/>
               </object>
